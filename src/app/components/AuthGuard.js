@@ -9,7 +9,7 @@ const AuthGuard = ({ children, role }) => {
 		return <Redirect to="/login" />
 	}
 
-	if (userInfo?.role === "admin") {
+	if (userInfo?.role === "admin"|| userInfo?.role === role) {
 		return children
 	}
 
