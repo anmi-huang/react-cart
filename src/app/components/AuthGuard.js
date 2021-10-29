@@ -9,11 +9,11 @@ const AuthGuard = ({ children, role }) => {
 		return <Redirect to="/login" />
 	}
 
-	if (userInfo?.role === "admin"|| userInfo?.role === role) {
+	if (userInfo?.role === "admin") {
 		return children
 	}
 
 	return <Redirect to="/" />
 }
-
+ 
 export default React.memo(AuthGuard)

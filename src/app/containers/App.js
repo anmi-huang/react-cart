@@ -16,6 +16,7 @@ const App = (props) => {
 				if (success) {
 					dispatch(changeUserInfo(data))
 					toggleInit(true)
+					console.log("isInit",isInit)
 				}
 			})
 			.catch(console.error)
