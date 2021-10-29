@@ -1,0 +1,21 @@
+.border-gray-200 {
+    border-color: $gray-200 !important;
+}
+.border-gray-300 {
+    border-color: $gray-300 !important;
+}
+.border-gray-400 {
+    border-color: $gray-400 !important;
+}
+
+.border-width-2px {
+    border-width: 2px !important;
+}
+
+.border-transparent {
+    border-color: transparent !important;
+}
+
+.border-0-last:last-child {
+    border: 0 !important;
+}

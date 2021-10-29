@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover"
+		/>
+		<title><%= htmlWebpackPlugin.options.title %></title>
+	</head>
+
+	<body>
+		<div id="root"></div>
+		<script>
+			var API_ROUTES = {
+				getSurvey: '/api/zh-tw/Mission/Quiz',
+				surveyProcess:
+					'/api/zh-tw/Mission/QuizReply'
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+i.icon {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+
+    &:before {
+        line-height: 1 !important;
+        @extend %iconfont-base;
+    }
+}
+
+$list: ('upload','share','calendar','duplicate','more','list','location-add','location-remove','day-add','day-remove','delete','save','quest','add','heart-fill','heart-stroke','lock','password','facebook','bus','bus-stop','info','locate','adv','taxi','rent','store','bike','toilet','parking','doc','drop','info-center','airplane','stopwatch','between','link-out','take-off','landing','reload', 'download', 'photo', 'video', 'audio', 'map', 'thumb', 'umbrella', 'mail', 'clock', 'checked', 'pause', 'speaker', 'tel', 'navigate', 'view', 'location', 'check', 'close', 'warn', 'link', 'global', 'dialog', 'arrow-left', 'arrow-right', 'arrow-down', 'logout', 'avatar', 'pencil', 'heart', 'earth', 'bell', 'hamburger', 'star', 'home', 'magnifier', 'dm', 'car', 'service'
+);
+
+@each $var in $list {
+    .icon-#{$var}:before {
+        content: iconfont-char('#{$var}');
+    }
+}
+
+//天氣
+.icon-weather {
+    &:before {
+        content: iconfont-char("wt-01");
+    }
+}
+
+@for $i from 1 through 42 {
+    $num: padding-zero($i);
+
+    .wt-#{$num}:before {
+        content: iconfont-char("wt-#{$num}");
+    }
+}

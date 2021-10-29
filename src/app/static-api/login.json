@@ -1,0 +1,8 @@
+{
+    "success": true,
+    "data": {
+        "is_login": true,
+        "role": "admin",
+        "name": "王大明"
+    }
+}

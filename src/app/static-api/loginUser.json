@@ -1,0 +1,8 @@
+{
+    "success": true,
+    "data": {
+        "is_login": true,
+        "role": "user",
+        "name": "王小明"
+    }
+}
