@@ -1,5 +1,6 @@
 import { combineReducers } from "redux"
 import { LOADING_HINT_TOGGLE, USER_INFO_CHANGE } from "constants/actionType"
+
 const isLoading = (state = false, action) => {
 	switch (action.type) {
 		case LOADING_HINT_TOGGLE:

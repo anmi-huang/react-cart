@@ -5,6 +5,7 @@ import { changeUserInfo, toggleLoadingHint } from "actions"
 
 const Login = (props) => {
     const dispatch = useDispatch()
+    //管理員登入
     const login = () => {
         dispatch(toggleLoadingHint(true))
         fetch("/static-api/login.json")
@@ -17,6 +18,7 @@ const Login = (props) => {
             })
             .catch(console.error)
     }
+     //使用者登入
     const loginUser = () => {
         dispatch(toggleLoadingHint(true))
         fetch("/static-api/loginUser.json")

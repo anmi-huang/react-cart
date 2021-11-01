@@ -13,7 +13,8 @@ const User = (props) => {
                <i className="icon icon-home mr-1 fz-20px " aria-hidden="true"></i>
                 
             </Link>
-			一般使用者: {userInfo.name}
+			<div>使用者: {userInfo.name}</div>
+			<div>權限: {userInfo.role}</div>
 		</div>
 	)
 }

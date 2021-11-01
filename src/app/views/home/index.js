@@ -18,6 +18,7 @@ const HomePage = (props) => {
                 }
             })
             .catch(console.error)
+
     }
     return (
         <div className="p-4">
@@ -25,7 +26,7 @@ const HomePage = (props) => {
                 <h1 className="fz-18px">首頁</h1>
                 {userInfo?.is_login && (
                     <button
-                            onClick={logout}
+                        onClick={logout}
                     >
                         <i className="icon icon-logout fz-22px " aria-hidden="true"></i>
                     </button>
@@ -52,7 +53,6 @@ const HomePage = (props) => {
                         </Link>
                     </li>
                 )}
-              
                  {userInfo?.is_login && (
                     <li className="mb-1 mb-0-last">
                         <Link

@@ -13,7 +13,8 @@ const Admin = (props) => {
                <i className="icon icon-home mr-1 fz-20px " aria-hidden="true"></i>
                 首頁
             </Link>
-			管理者: {userInfo.name}
+			<div>管理者: {userInfo.name}</div>
+			<div>權限: {userInfo.role}</div>
 		</div>
 	)
 }

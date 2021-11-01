@@ -3,8 +3,8 @@ import Routes from "Routes"
 import { useDispatch } from "react-redux"
 import { changeUserInfo, toggleLoadingHint } from "actions"
 import LoadingHint from "components/LoadingHint"
-
 const App = (props) => {
+	
 	const [isInit, toggleInit] = useState(false)
 	const dispatch = useDispatch()
 	useEffect(() => {
@@ -13,10 +13,9 @@ const App = (props) => {
 			.then((resp) => resp.json())
 			.then(({ success, data }) => {
 				dispatch(toggleLoadingHint(false))
-				if (success) {
+				if (success) { 
 					dispatch(changeUserInfo(data))
 					toggleInit(true)
-					console.log("isInit",isInit)
 				}
 			})
 			.catch(console.error)
