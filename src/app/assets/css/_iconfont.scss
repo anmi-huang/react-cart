@@ -77,420 +77,440 @@
         $char:"\ea0f";
     }
 
-    @if $name == check {
+    @if $name == cart {
         $char:"\ea10";
     }
 
-    @if $name == checked {
+    @if $name == check {
         $char:"\ea11";
     }
 
-    @if $name == clock {
+    @if $name == checked {
         $char:"\ea12";
     }
 
-    @if $name == close {
+    @if $name == clock {
         $char:"\ea13";
     }
 
-    @if $name == day-add {
+    @if $name == close {
         $char:"\ea14";
     }
 
-    @if $name == day-remove {
+    @if $name == day-add {
         $char:"\ea15";
     }
 
-    @if $name == delete {
+    @if $name == day-remove {
         $char:"\ea16";
     }
 
-    @if $name == dialog {
+    @if $name == delete {
         $char:"\ea17";
     }
 
-    @if $name == dm {
+    @if $name == dialog {
         $char:"\ea18";
     }
 
-    @if $name == doc {
+    @if $name == dm {
         $char:"\ea19";
     }
 
-    @if $name == download {
+    @if $name == doc {
         $char:"\ea1a";
     }
 
-    @if $name == drop {
+    @if $name == download {
         $char:"\ea1b";
     }
 
-    @if $name == duplicate {
+    @if $name == drop {
         $char:"\ea1c";
     }
 
-    @if $name == earth {
+    @if $name == duplicate {
         $char:"\ea1d";
     }
 
-    @if $name == facebook {
+    @if $name == earth {
         $char:"\ea1e";
     }
 
-    @if $name == global {
+    @if $name == facebook {
         $char:"\ea1f";
     }
 
-    @if $name == hamburger {
+    @if $name == global {
         $char:"\ea20";
     }
 
-    @if $name == heart-fill {
+    @if $name == hamburger {
         $char:"\ea21";
     }
 
-    @if $name == heart-stroke {
+    @if $name == heart-fill {
         $char:"\ea22";
     }
 
-    @if $name == heart {
+    @if $name == heart-stroke {
         $char:"\ea23";
     }
 
-    @if $name == home {
+    @if $name == heart {
         $char:"\ea24";
     }
 
-    @if $name == info-center {
+    @if $name == home {
         $char:"\ea25";
     }
 
-    @if $name == info {
+    @if $name == ic-facebook {
         $char:"\ea26";
     }
 
-    @if $name == landing {
+    @if $name == ic-line {
         $char:"\ea27";
     }
 
-    @if $name == link-out {
+    @if $name == info-center {
         $char:"\ea28";
     }
 
-    @if $name == link {
+    @if $name == info {
         $char:"\ea29";
     }
 
-    @if $name == list {
+    @if $name == landing {
         $char:"\ea2a";
     }
 
-    @if $name == locate {
+    @if $name == line {
         $char:"\ea2b";
     }
 
-    @if $name == location-add {
+    @if $name == link-out {
         $char:"\ea2c";
     }
 
-    @if $name == location-remove {
+    @if $name == link {
         $char:"\ea2d";
     }
 
-    @if $name == location {
+    @if $name == list {
         $char:"\ea2e";
     }
 
-    @if $name == lock {
+    @if $name == locate {
         $char:"\ea2f";
     }
 
-    @if $name == logout {
+    @if $name == location-add {
         $char:"\ea30";
     }
 
-    @if $name == magnifier {
+    @if $name == location-remove {
         $char:"\ea31";
     }
 
-    @if $name == mail {
+    @if $name == location {
         $char:"\ea32";
     }
 
-    @if $name == map {
+    @if $name == lock {
         $char:"\ea33";
     }
 
-    @if $name == more {
+    @if $name == logout {
         $char:"\ea34";
     }
 
-    @if $name == navigate {
+    @if $name == magnifier {
         $char:"\ea35";
     }
 
-    @if $name == parking {
+    @if $name == mail {
         $char:"\ea36";
     }
 
-    @if $name == password {
+    @if $name == map {
         $char:"\ea37";
     }
 
-    @if $name == pause {
+    @if $name == minus {
         $char:"\ea38";
     }
 
-    @if $name == pencil {
+    @if $name == more {
         $char:"\ea39";
     }
 
-    @if $name == photo {
+    @if $name == navigate {
         $char:"\ea3a";
     }
 
-    @if $name == quest {
+    @if $name == parking {
         $char:"\ea3b";
     }
 
-    @if $name == reload {
+    @if $name == password {
         $char:"\ea3c";
     }
 
-    @if $name == rent {
+    @if $name == pause {
         $char:"\ea3d";
     }
 
-    @if $name == save {
+    @if $name == pencil {
         $char:"\ea3e";
     }
 
-    @if $name == service {
+    @if $name == photo {
         $char:"\ea3f";
     }
 
-    @if $name == share {
+    @if $name == quest {
         $char:"\ea40";
     }
 
-    @if $name == speaker {
+    @if $name == reload {
         $char:"\ea41";
     }
 
-    @if $name == star {
+    @if $name == rent {
         $char:"\ea42";
     }
 
-    @if $name == stopwatch {
+    @if $name == save {
         $char:"\ea43";
     }
 
-    @if $name == store {
+    @if $name == service {
         $char:"\ea44";
     }
 
-    @if $name == take-off {
+    @if $name == share {
         $char:"\ea45";
     }
 
-    @if $name == taxi {
+    @if $name == speaker {
         $char:"\ea46";
     }
 
-    @if $name == tel {
+    @if $name == star {
         $char:"\ea47";
     }
 
-    @if $name == thumb {
+    @if $name == stopwatch {
         $char:"\ea48";
     }
 
-    @if $name == toilet {
+    @if $name == store {
         $char:"\ea49";
     }
 
-    @if $name == umbrella {
+    @if $name == take-off {
         $char:"\ea4a";
     }
 
-    @if $name == upload {
+    @if $name == taxi {
         $char:"\ea4b";
     }
 
-    @if $name == video {
+    @if $name == tel {
         $char:"\ea4c";
     }
 
-    @if $name == view {
+    @if $name == thumb {
         $char:"\ea4d";
     }
 
-    @if $name == warn {
+    @if $name == toilet {
         $char:"\ea4e";
     }
 
-    @if $name == wt-01 {
+    @if $name == umbrella {
         $char:"\ea4f";
     }
 
-    @if $name == wt-02 {
+    @if $name == upload {
         $char:"\ea50";
     }
 
-    @if $name == wt-03 {
+    @if $name == video {
         $char:"\ea51";
     }
 
-    @if $name == wt-04 {
+    @if $name == view {
         $char:"\ea52";
     }
 
-    @if $name == wt-05 {
+    @if $name == warn {
         $char:"\ea53";
     }
 
-    @if $name == wt-06 {
+    @if $name == wt-01 {
         $char:"\ea54";
     }
 
-    @if $name == wt-07 {
+    @if $name == wt-02 {
         $char:"\ea55";
     }
 
-    @if $name == wt-08 {
+    @if $name == wt-03 {
         $char:"\ea56";
     }
 
-    @if $name == wt-09 {
+    @if $name == wt-04 {
         $char:"\ea57";
     }
 
-    @if $name == wt-10 {
+    @if $name == wt-05 {
         $char:"\ea58";
     }
 
-    @if $name == wt-11 {
+    @if $name == wt-06 {
         $char:"\ea59";
     }
 
-    @if $name == wt-12 {
+    @if $name == wt-07 {
         $char:"\ea5a";
     }
 
-    @if $name == wt-13 {
+    @if $name == wt-08 {
         $char:"\ea5b";
     }
 
-    @if $name == wt-14 {
+    @if $name == wt-09 {
         $char:"\ea5c";
     }
 
-    @if $name == wt-15 {
+    @if $name == wt-10 {
         $char:"\ea5d";
     }
 
-    @if $name == wt-16 {
+    @if $name == wt-11 {
         $char:"\ea5e";
     }
 
-    @if $name == wt-17 {
+    @if $name == wt-12 {
         $char:"\ea5f";
     }
 
-    @if $name == wt-18 {
+    @if $name == wt-13 {
         $char:"\ea60";
     }
 
-    @if $name == wt-19 {
+    @if $name == wt-14 {
         $char:"\ea61";
     }
 
-    @if $name == wt-20 {
+    @if $name == wt-15 {
         $char:"\ea62";
     }
 
-    @if $name == wt-21 {
+    @if $name == wt-16 {
         $char:"\ea63";
     }
 
-    @if $name == wt-22 {
+    @if $name == wt-17 {
         $char:"\ea64";
     }
 
-    @if $name == wt-23 {
+    @if $name == wt-18 {
         $char:"\ea65";
     }
 
-    @if $name == wt-24 {
+    @if $name == wt-19 {
         $char:"\ea66";
     }
 
-    @if $name == wt-25 {
+    @if $name == wt-20 {
         $char:"\ea67";
     }
 
-    @if $name == wt-26 {
+    @if $name == wt-21 {
         $char:"\ea68";
     }
 
-    @if $name == wt-27 {
+    @if $name == wt-22 {
         $char:"\ea69";
     }
 
-    @if $name == wt-28 {
+    @if $name == wt-23 {
         $char:"\ea6a";
     }
 
-    @if $name == wt-29 {
+    @if $name == wt-24 {
         $char:"\ea6b";
     }
 
-    @if $name == wt-30 {
+    @if $name == wt-25 {
         $char:"\ea6c";
     }
 
-    @if $name == wt-31 {
+    @if $name == wt-26 {
         $char:"\ea6d";
     }
 
-    @if $name == wt-32 {
+    @if $name == wt-27 {
         $char:"\ea6e";
     }
 
-    @if $name == wt-33 {
+    @if $name == wt-28 {
         $char:"\ea6f";
     }
 
-    @if $name == wt-34 {
+    @if $name == wt-29 {
         $char:"\ea70";
     }
 
-    @if $name == wt-35 {
+    @if $name == wt-30 {
         $char:"\ea71";
     }
 
-    @if $name == wt-36 {
+    @if $name == wt-31 {
         $char:"\ea72";
     }
 
-    @if $name == wt-37 {
+    @if $name == wt-32 {
         $char:"\ea73";
     }
 
-    @if $name == wt-38 {
+    @if $name == wt-33 {
         $char:"\ea74";
     }
 
-    @if $name == wt-39 {
+    @if $name == wt-34 {
         $char:"\ea75";
     }
 
-    @if $name == wt-41 {
+    @if $name == wt-35 {
         $char:"\ea76";
     }
 
-    @if $name == wt-42 {
+    @if $name == wt-36 {
         $char:"\ea77";
+    }
+
+    @if $name == wt-37 {
+        $char:"\ea78";
+    }
+
+    @if $name == wt-38 {
+        $char:"\ea79";
+    }
+
+    @if $name == wt-39 {
+        $char:"\ea7a";
+    }
+
+    @if $name == wt-41 {
+        $char:"\ea7b";
+    }
+
+    @if $name == wt-42 {
+        $char:"\ea7c";
     }
 
     @return $char;

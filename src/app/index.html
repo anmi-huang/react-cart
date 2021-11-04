@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover"
-		/>
-		<title><%= htmlWebpackPlugin.options.title %></title>
-	</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover" />
+        <title><%= htmlWebpackPlugin.options.title %></title>
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+            integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+            crossorigin="anonymous"
+        />
+    </head>
 
-	<body>
-		<div id="root"></div>
-		<script>
-			var API_ROUTES = {
-				getSurvey: '/api/zh-tw/Mission/Quiz',
-				surveyProcess:
-					'/api/zh-tw/Mission/QuizReply'
-			}
-		</script>
-	</body>
+    <body>
+        <div id="root"></div>
+        <script>
+            var API_ROUTES = {
+                isLogin: '/static-api/is-login.json',
+                login: '/static-api/login.json',
+                logout: '/static-api/logout.json',
+                loginUser: '/static-api/loginUser.json',
+            }
+        </script>
+    </body>
 </html>
