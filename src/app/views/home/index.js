@@ -25,7 +25,7 @@ const HomePage = (props) => {
                     <Navbar />
                 </header>
                 <img className="w-100 mt-2 " src="/assets/images/navbar-img.png" alt=""></img>
-                <div className="row  ">
+                <div className="row ">
                     <ProductList />
 
                     <div className="col-md-8">

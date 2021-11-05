@@ -60,7 +60,7 @@ const Checkout = (props) => {
                                         })}
                                     />
                                     {errors.lastname && (
-                                        <div className="text-danger fz-12px">{errors.lastname.message}</div>
+                                        <div className="text-warning fz-12px">{errors.lastname.message}</div>
                                     )}
                                 </div>
                                 <div className="col-6 form-item pl-4px">
@@ -78,7 +78,7 @@ const Checkout = (props) => {
                                         })}
                                     />
                                     {errors.firstname && (
-                                        <div className="text-danger fz-12px">{errors.firstname.message}</div>
+                                        <div className="text-warning fz-12px">{errors.firstname.message}</div>
                                     )}
                                 </div>
                                 <div className="col form-item">
@@ -94,12 +94,12 @@ const Checkout = (props) => {
                                         ref={register({
                                             required: '此欄位為必填',
                                             pattern: {
-                                                value: /^09\d{2}\d{6}$/ | /^0\d{1,2}\d{6,8}$/,
+                                                value: /^09\d{2}\d{6}$/,
                                                 message: '格式：0912-345678',
                                             },
                                         })}
                                     />
-                                    {errors.phone && <div className="text-danger fz-12px">{errors.phone.message}</div>}
+                                    {errors.phone && <div className="text-warning fz-12px">{errors.phone.message}</div>}
                                 </div>
 
                                 <div className="col-12">
@@ -155,7 +155,7 @@ const Checkout = (props) => {
                                         })}
                                     />
                                     {errors.address && (
-                                        <div className="text-danger fz-12px">{errors.address.message}</div>
+                                        <div className="text-warning fz-12px">{errors.address.message}</div>
                                     )}
                                 </div>
                             </div>

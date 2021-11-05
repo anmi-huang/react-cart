@@ -61,7 +61,7 @@ const HomePage = (props) => {
                 )}
                 <li className="mb-1 mb-0-last">
                     <Link className="btn justify-content-start h-6 rounded" to="/">
-                        甜點網站
+                        返回首頁
                     </Link>
                 </li>
             </ul>
