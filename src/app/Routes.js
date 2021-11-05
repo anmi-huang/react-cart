@@ -7,14 +7,14 @@ import User from 'views/home/User'
 import Weather from './views/home/weather/index'
 import AuthGuard from 'components/AuthGuard'
 import NoAuthGuard from 'components/NoAuthGuard'
-import AAA from 'views/home/index'
+import Homepage from 'views/home/index'
 import Cart from 'views/home/Cart'
 import Checkout from './views/home/Checkout'
 export default () => (
     <Router>
         <Switch>
             <Route exact path="/">
-                <AAA />
+                <Homepage />
             </Route>
             <Route exact path="/home">
                 <Home />

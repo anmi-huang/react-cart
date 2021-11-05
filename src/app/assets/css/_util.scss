@@ -506,7 +506,7 @@ button:disabled {
     }
 }
 
-.order-list {
+.order-color {
     @include media-breakpoint-up(md) {
         color: $secondary;
         background-color: $primary;
@@ -519,14 +519,14 @@ button:disabled {
 //     }
 // }
 
-.order-blk {
+.order-text-color {
     color: $primary !important;
     @include media-breakpoint-up(md) {
         color: $secondary !important;
     }
 }
 
-.border-order {
+.border-color {
     background-color: $secondary;
     @include media-breakpoint-up(md) {
         background-color: $primary;

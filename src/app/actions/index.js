@@ -17,12 +17,11 @@ export const changeUserInfo = (obj) => ({
     payload: obj,
 })
 
-export const addItem = (idx, item, listData) => {
+export const addItem = (idx, item) => {
     return {
         type: ADD_ITEM,
         idx,
         item,
-        listData,
     }
 }
 export const deleteItem = (idx) => {

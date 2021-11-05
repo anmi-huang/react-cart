@@ -17,22 +17,21 @@ const HomePage = (props) => {
             })
             .catch(console.error)
     }, [])
-    console.log('data', data)
+    // console.log('data', data)
     return (
         <div className="maw-1280px mx-auto">
             <div className="page-container">
                 <header>
                     <Navbar />
-                    <img className="w-100 mt-2 " src="/assets/images/navbar-img.png" alt=""></img>
                 </header>
-
+                <img className="w-100 mt-2 " src="/assets/images/navbar-img.png" alt=""></img>
                 <div className="row mt-2 ">
                     <ProductList />
 
                     <div className="col-md-8">
                         <ul className="row" id="product-row">
                             {data.map((item, i) => (
-                                <li className="col-md-6 mt-3 " key={i}>
+                                <li className="col-md-6 mt-3 " key={item.id}>
                                     <div className="card border border-secondary">
                                         <Link to="/" className="text-decoration-none ">
                                             <div>
@@ -56,7 +55,7 @@ const HomePage = (props) => {
                                         <button
                                             className="js-product-row add-item-tr fz-22px fz-md-28px btn-add bg-secondary text-center text-primary w-100 py-2"
                                             onClick={() => {
-                                                dispatch(addItem(i, item, data))
+                                                dispatch(addItem(i, item))
                                             }}
                                         >
                                             加入購物車

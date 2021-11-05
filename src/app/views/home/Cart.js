@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from 'components/Navbar'
 import Footer from 'components/Footer'
@@ -9,6 +9,17 @@ import { deleteItem, btnAddItem, btnMinuserItem } from '../../actions'
 const Cart = (props) => {
     const dispatch = useDispatch()
     const localData = useSelector((state) => state.data)
+    const [data, setData] = useState([])
+
+    useEffect(() => {
+        fetch('static-api/dessert.json')
+            .then((resp) => resp.json())
+            .then(({ success, data }) => {
+                setData(data)
+            })
+            .catch(console.error)
+    }, [])
+    // console.log('data', data)
     return (
         <div className="maw-1280px mx-auto">
             <div className="page-container">
@@ -23,9 +34,9 @@ const Cart = (props) => {
                             您的購物車
                         </div>
                         <ul>
-                            {localData.map((item, i) => (
+                            {localData.map((item, idx) => (
                                 <li
-                                    key={i}
+                                    key={item.id}
                                     className="mb-2 mb-0-last row g-0 col-md-12 mb-2 pb-2 mx-0 px-0 border-cart border-secondary text-primary align-items-center  justify-content-between ff-ping-fang-tc-semibold  "
                                 >
                                     <div className="col-6 col-md-3 pl-0">
@@ -41,7 +52,7 @@ const Cart = (props) => {
                                             <button
                                                 className=" w-6 h-6 ff-ping-fang-tc-light border border-right-0 text-center btn-active"
                                                 onClick={() => {
-                                                    dispatch(btnMinuserItem(i))
+                                                    dispatch(btnMinuserItem(idx))
                                                 }}
                                             >
                                                 <i className="icon icon-minus text-primary pointer-events-none"></i>
@@ -52,7 +63,7 @@ const Cart = (props) => {
                                             <button
                                                 className="  w-6 h-6 ff-ping-fang-tc-light  border text-center btn-active"
                                                 onClick={() => {
-                                                    dispatch(btnAddItem(i, item))
+                                                    dispatch(btnAddItem(idx))
                                                 }}
                                             >
                                                 <i className="icon icon-add text-primary pointer-events-none"></i>
@@ -67,7 +78,7 @@ const Cart = (props) => {
                                         <button
                                             className="col-md-2 d-none d-md-block text-right px-1"
                                             onClick={() => {
-                                                dispatch(deleteItem(i))
+                                                dispatch(deleteItem(idx))
                                             }}
                                         >
                                             <i className="icon icon-delete fz-24px text-primary"></i>
@@ -78,24 +89,17 @@ const Cart = (props) => {
                         </ul>
                     </div>
                     {/* <!-- cart-list end --> */}
-                    <OrderList color="order-blk" list="order-list " order="border-order" localData={localData}>
+                    <OrderList color="order-text-color" bg="order-color " title="border-color" localData={localData}>
                         <Link
                             to="/checkout"
-                            className="d-none d-md-block  bg-yellow  text-center p-2 fz-24px ff-ping-fang-tc-semibold text-primary text-decoration-none "
+                            className=" d-block text-center mx-sm-n2 bg-yellow p-2 fz-24px ff-ping-fang-tc-semibold text-primary "
                         >
                             結帳
                         </Link>
                     </OrderList>
                 </div>
             </div>
-            <Footer>
-                <Link
-                    to="/checkout"
-                    className="d-block d-md-none  bg-yellow  text-center py-2 fz-24px ff-ping-fang-tc-semibold text-primary text-decoration-none "
-                >
-                    結帳
-                </Link>
-            </Footer>
+            <Footer></Footer>
         </div>
     )
 }

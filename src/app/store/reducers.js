@@ -26,21 +26,23 @@ const userInfo = (state = null, action) => {
 }
 
 //reducer
-const data = (state = JSON.parse(localStorage.getItem('DataList')) || [], action) => {
-    const { type, idx, item, listData } = action
+const data = (state = JSON.parse(localStorage.getItem('DataList1')) || [], action) => {
+    const { type, idx, item } = action
     let resultState
     switch (type) {
         case ADD_ITEM:
-            const findIdx = listData.findIndex((i) => i.id === item.id)
+            const findIdx = state.findIndex((i) => i.id === item.id)
+            console.log('idx', idx)
+            console.log('item', item)
+            // console.log('findIdx', state[idx])
             if (state[findIdx]) {
-                state[idx].amount += 1
+                state[findIdx].amount += 1
                 resultState = [...state]
-                console.log('state[idx]', state[idx])
             } else {
                 item.amount = 1
                 resultState = [...state, item]
             }
-            console.log('item', item)
+            // console.log('item', item)
             break
         case DELETE_ITEM:
             resultState = [...state.slice(0, idx), ...state.slice(idx + 1)]
@@ -59,13 +61,12 @@ const data = (state = JSON.parse(localStorage.getItem('DataList')) || [], action
             }
             // state[minuserId].amount >= 0 ? (state[minuserId].amount -= 1) : 0
             resultState = [...state]
-            console.log('state[minuserId].amount', state[minuserId].amount)
             break
         default:
             resultState = state
     }
 
-    localStorage.setItem('DataList', JSON.stringify(resultState))
+    localStorage.setItem('DataList1', JSON.stringify(resultState))
 
     return resultState
 }
