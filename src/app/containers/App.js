@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { changeUserInfo, toggleLoadingHint } from 'actions'
 import LoadingHint from 'components/LoadingHint'
-import Layout from './Layout'
+
 const App = (props) => {
     const [isInit, toggleInit] = useState(false)
     const dispatch = useDispatch()

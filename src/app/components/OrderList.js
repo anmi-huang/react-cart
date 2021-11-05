@@ -15,7 +15,7 @@ const OrderList = ({ bg, color, title, children, localData, className, hasCartLi
     })
 
     return (
-        <aside className={`col-md-4 ff-ping-fang-tc-semibold  text-center fz-24px mb-2 ${className}`}>
+        <aside className={`col-md-4 ff-ping-fang-tc-semibold  text-center fz-24px ${className}`}>
             <div className={`${bg}`}>
                 <div className={`text-center  py-2 px-auto fz-24px  ${title} ${color}`}>訂單摘要</div>
 

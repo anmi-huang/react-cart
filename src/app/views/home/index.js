@@ -25,13 +25,13 @@ const HomePage = (props) => {
                     <Navbar />
                 </header>
                 <img className="w-100 mt-2 " src="/assets/images/navbar-img.png" alt=""></img>
-                <div className="row mt-2 ">
+                <div className="row  ">
                     <ProductList />
 
                     <div className="col-md-8">
-                        <ul className="row" id="product-row">
+                        <ul className="row">
                             {data.map((item, i) => (
-                                <li className="col-md-6 mt-3 " key={item.id}>
+                                <li className="col-md-6 mt-2 " key={item.id}>
                                     <div className="card border border-secondary">
                                         <Link to="/" className="text-decoration-none ">
                                             <div>
