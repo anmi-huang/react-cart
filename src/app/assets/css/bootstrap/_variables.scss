@@ -140,7 +140,7 @@ $spacers: map-merge(
     (
         0: 0,
         '1px': (
-            $spacer * 2,
+            $spacer * 0.0625,
         ),
         '2px': (
             $spacer * 0.125,
