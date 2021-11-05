@@ -33,7 +33,7 @@ const Checkout = (props) => {
                     <div className="col-md-8">
                         <form className="ff-ping-fang-tc-semibold" onSubmit={handleSubmit(onSubmit)}>
                             <div className="row mx-0 bg-primary text-secondary page-container py-4 px-4">
-                                <legend className="col-6 fz-36px">運送</legend>
+                                <div className="col-6 fz-36px">運送</div>
                                 <div className="col-6 d-flex justify-content-between align-items-center">
                                     <div className="rounded-circle border border-secondary w-3 h-3 d-flex justify-content-center align-items-center bg-primary">
                                         <div className="rounded-circle border border-secondary w-2 h-2 bg-secondary"></div>
@@ -55,7 +55,7 @@ const Checkout = (props) => {
                                         className=" px-2 bg-secondary h-7  w-100"
                                         name="lastname"
                                         placeholder="王"
-                                        ref={register('lastname', {
+                                        ref={register({
                                             required: '此欄位為必填',
                                         })}
                                     />
@@ -73,7 +73,7 @@ const Checkout = (props) => {
                                         className="px-2 bg-secondary h-7  w-100"
                                         name="firstname"
                                         placeholder="小明"
-                                        ref={register('firstname', {
+                                        ref={register({
                                             required: '此欄位為必填',
                                         })}
                                     />
@@ -91,10 +91,10 @@ const Checkout = (props) => {
                                         className="px-2 bg-secondary h-7 w-100"
                                         name="phone"
                                         placeholder="0912-345678"
-                                        ref={register('phone', {
+                                        ref={register({
                                             required: '此欄位為必填',
                                             pattern: {
-                                                value: /^09\d{2}\d{6}$/,
+                                                value: /^09\d{2}\d{6}$/ | /^0\d{1,2}\d{6,8}$/,
                                                 message: '格式：0912-345678',
                                             },
                                         })}
@@ -150,7 +150,7 @@ const Checkout = (props) => {
                                         className="px-2 bg-secondary h-7  w-100"
                                         name="address"
                                         placeholder="幸福路 520 號"
-                                        ref={register('address', {
+                                        ref={register({
                                             required: '此欄位為必填',
                                         })}
                                     />
