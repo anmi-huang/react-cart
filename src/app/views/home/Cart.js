@@ -95,7 +95,7 @@ const Cart = (props) => {
                     <OrderList color="order-text-color" bg="order-color " title="border-color" localData={localData}>
                         <Link
                             to="/checkout"
-                            className="d-block text-center bg-yellow p-2 fz-24px ff-ping-fang-tc-semibold text-primary  mx-n2"
+                            className="d-block text-center bg-yellow p-2 fz-24px ff-ping-fang-tc-semibold text-primary mx-n2 mx-md-0"
                         >
                             結帳
                         </Link>
