@@ -5,6 +5,7 @@ import Footer from 'components/Footer'
 import OrderList from 'components/OrderList'
 import { useSelector, useDispatch } from 'react-redux'
 import { deleteItem, btnAddItem, btnMinuserItem } from '../../actions'
+import confirm, { Button, alert } from 'react-alert-confirm'
 
 const Cart = (props) => {
     const dispatch = useDispatch()
@@ -20,6 +21,7 @@ const Cart = (props) => {
             .catch(console.error)
     }, [])
     // console.log('data', data)
+
     return (
         <div className="maw-1280px mx-auto">
             <div className="page-container">
@@ -78,6 +80,7 @@ const Cart = (props) => {
                                         <button
                                             className="col-md-2 d-none d-md-block text-right px-1"
                                             onClick={() => {
+                                                confirm()
                                                 dispatch(deleteItem(idx))
                                             }}
                                         >
@@ -92,7 +95,7 @@ const Cart = (props) => {
                     <OrderList color="order-text-color" bg="order-color " title="border-color" localData={localData}>
                         <Link
                             to="/checkout"
-                            className=" d-block text-center mx-sm-n2 bg-yellow p-2 fz-24px ff-ping-fang-tc-semibold text-primary "
+                            className=" d-block text-center bg-yellow p-2 fz-24px ff-ping-fang-tc-semibold text-primary "
                         >
                             結帳
                         </Link>
