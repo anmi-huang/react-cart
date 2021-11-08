@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from 'components/Navbar'
 import Footer from 'components/Footer'
 
-const Layout = (props) => {
+const Layout = ({ children }) => {
     return (
         <div className="maw-1280px mx-auto">
             <div className="page-container">
@@ -10,6 +10,7 @@ const Layout = (props) => {
                     <Navbar />
                 </header>
             </div>
+            {children}
             <Footer />
         </div>
     )

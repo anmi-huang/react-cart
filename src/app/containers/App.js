@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import Routes from 'Routes'
-import { Link } from 'react-router-dom'
+import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { changeUserInfo, toggleLoadingHint } from 'actions'
 import LoadingHint from 'components/LoadingHint'
+import Layout from './Layout'
 
 const App = (props) => {
     const [isInit, toggleInit] = useState(false)
@@ -24,7 +25,9 @@ const App = (props) => {
 
     return (
         <>
-            {isInit && <Routes />}
+            <Router>
+                <Layout>{isInit && <Routes />}</Layout>
+            </Router>
             <LoadingHint />
         </>
     )
