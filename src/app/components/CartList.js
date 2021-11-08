@@ -22,7 +22,7 @@ const CartList = () => {
                                 className="cart-img w-100 h-10 px-2"
                             />
                         </div>
-                        <div className=" row g-0 col-md-6 ff-ping-fang-tc-light ">
+                        <div className="row g-0 col-md-6 ff-ping-fang-tc-light ">
                             <div>
                                 <div className="fz-16px">
                                     {item.itemName} ( {item.amount} )

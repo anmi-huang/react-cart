@@ -23,10 +23,13 @@ const Checkout = (props) => {
     }, [])
 
     return (
-        <div className="row mt-2 ">
+        <div className="row mt-2">
             <div className="col-md-8">
-                <form className="ff-ping-fang-tc-semibold" onSubmit={handleSubmit(onSubmit)}>
-                    <div className="row mx-0 bg-primary text-secondary page-container py-4 px-4">
+                <form
+                    className="ff-ping-fang-tc-semibold"
+                    onSubmit={handleSubmit(onSubmit)}
+                >
+                    <div className="row mx-0 bg-primary text-secondary page-container py-4 px-4 ">
                         <div className="col-6 fz-36px">運送</div>
                         <div className="col-6 d-flex justify-content-between align-items-center">
                             <div className="rounded-circle border border-secondary w-3 h-3 d-flex justify-content-center align-items-center bg-primary">
@@ -40,7 +43,10 @@ const Checkout = (props) => {
                             </div>
                         </div>
                         <div className="col-6 form-item pr-4px ">
-                            <label htmlFor="lastname" className="d-block pb-1 mt-4 fz-20px">
+                            <label
+                                htmlFor="lastname"
+                                className="d-block pb-1 mt-4 fz-20px"
+                            >
                                 姓氏
                             </label>
                             <input
@@ -50,13 +56,20 @@ const Checkout = (props) => {
                                 name="lastname"
                                 placeholder="王"
                                 ref={register({
-                                    required: '此欄位為必填',
+                                    required: '此欄位為必填'
                                 })}
                             />
-                            {errors.lastname && <div className="text-warning fz-12px">{errors.lastname.message}</div>}
+                            {errors.lastname && (
+                                <div className="text-warning fz-12px">
+                                    {errors.lastname.message}
+                                </div>
+                            )}
                         </div>
                         <div className="col-6 form-item pl-4px">
-                            <label htmlFor="firstname" className="d-block pb-1 mt-4 fz-20px">
+                            <label
+                                htmlFor="firstname"
+                                className="d-block pb-1 mt-4 fz-20px"
+                            >
                                 名字
                             </label>
                             <input
@@ -66,13 +79,20 @@ const Checkout = (props) => {
                                 name="firstname"
                                 placeholder="小明"
                                 ref={register({
-                                    required: '此欄位為必填',
+                                    required: '此欄位為必填'
                                 })}
                             />
-                            {errors.firstname && <div className="text-warning fz-12px">{errors.firstname.message}</div>}
+                            {errors.firstname && (
+                                <div className="text-warning fz-12px">
+                                    {errors.firstname.message}
+                                </div>
+                            )}
                         </div>
                         <div className="col form-item">
-                            <label htmlFor="phone" className="d-block pb-1 mt-2 fz-20px">
+                            <label
+                                htmlFor="phone"
+                                className="d-block pb-1 mt-2 fz-20px"
+                            >
                                 電話
                             </label>
                             <input
@@ -84,16 +104,25 @@ const Checkout = (props) => {
                                 ref={register({
                                     required: '此欄位為必填',
                                     pattern: {
-                                        value: /^0\d{1,2}\d{6,8}$/ || /^09\d{2}\d{6}$/,
-                                        message: '格式：0912-345678',
-                                    },
+                                        value:
+                                            /^0\d{1,2}\d{6,8}$/ ||
+                                            /^09\d{2}\d{6}$/,
+                                        message: '格式：0912-345678'
+                                    }
                                 })}
                             />
-                            {errors.phone && <div className="text-warning fz-12px">{errors.phone.message}</div>}
+                            {errors.phone && (
+                                <div className="text-warning fz-12px">
+                                    {errors.phone.message}
+                                </div>
+                            )}
                         </div>
 
                         <div className="col-12">
-                            <label htmlFor="address" className="d-block pb-1 mt-2 fz-20px">
+                            <label
+                                htmlFor="address"
+                                className="d-block pb-1 mt-2 fz-20px"
+                            >
                                 地址
                             </label>
                         </div>
@@ -126,25 +155,31 @@ const Checkout = (props) => {
                                     setDistrict(e.target.value)
                                 }}
                             >
-                                {locationData[nameId]?.districts.map((item, i) => (
-                                    <option key={i} value={item.name}>
-                                        {item.name}
-                                    </option>
-                                ))}
+                                {locationData[nameId]?.districts.map(
+                                    (item, i) => (
+                                        <option key={i} value={item.name}>
+                                            {item.name}
+                                        </option>
+                                    )
+                                )}
                             </select>
                         </div>
                         <div className="col form-item">
                             <input
                                 type="text"
                                 id="address"
-                                className="px-2 bg-secondary h-7  w-100"
+                                className="px-2 bg-secondary h-7 w-100"
                                 name="address"
                                 placeholder="幸福路 520 號"
                                 ref={register({
-                                    required: '此欄位為必填',
+                                    required: '此欄位為必填'
                                 })}
                             />
-                            {errors.address && <div className="text-warning fz-12px">{errors.address.message}</div>}
+                            {errors.address && (
+                                <div className="text-warning fz-12px">
+                                    {errors.address.message}
+                                </div>
+                            )}
                         </div>
                     </div>
                     <input

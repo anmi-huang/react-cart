@@ -30,31 +30,46 @@ const HomePage = () => {
         <div>
             <div className="p-4">
                 <div className="d-flex flex-shrink-0 position-relative mb-1 ">
-                    <Link className="btn w-6 h-6 border-0 position-relative z-100" to="/">
-                        <i className="icon icon-home mr-1 fz-20px text-secondary" aria-hidden="true"></i>
+                    <Link
+                        className="btn w-6 h-6 border-0 position-relative z-100"
+                        to="/home"
+                    >
+                        <i
+                            className="icon icon-home mr-1 fz-20px text-primary "
+                            aria-hidden="true"
+                        ></i>
                     </Link>
                     <h1 className="fz-18px d-flex justify-content-center align-items-center fill-parent font-weight-bolder">
                         天氣資訊
                     </h1>
                 </div>
-            <ul> 
-                {data.map((item, i) => (
-                    <li className="mb-2" key={i}>
-                        <Link
-                            to={`/weather/${item.location}`}
-                            className="btn justify-content-between w-100 h-6 px-2 rounded"
-                        >
-                            {item.location}
-                            <i className="icon icon-arrow-right fz-13px" aria-hidden="true"></i>
-                        </Link>
-                    </li>
-                ))}
-            </ul>
-            </div>  
+                <ul>
+                    {data.map((item, i) => (
+                        <li className="mb-2" key={i}>
+                            <Link
+                                to={`/weather/${item.location}`}
+                                className="btn justify-content-between w-100 h-6 px-2 rounded"
+                            >
+                                {item.location}
+                                <i
+                                    className="icon icon-arrow-right fz-13px"
+                                    aria-hidden="true"
+                                ></i>
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </div>
             <SlideView isShow={locationId} className="bg-light">
                 <div className="d-flex flex-shrink-0 bg-light position-relative shadow">
-                    <Link className="btn w-6 h-6 border-0 position-relative z-100" to="/weather">
-                        <i className="icon icon-arrow-left" aria-hidden="true"></i>
+                    <Link
+                        className="btn w-6 h-6 border-0 position-relative z-100"
+                        to="/weather"
+                    >
+                        <i
+                            className="icon icon-arrow-left"
+                            aria-hidden="true"
+                        ></i>
                         <span className="sr-only">返回</span>
                     </Link>
                     <div className="d-flex justify-content-center align-items-center fill-parent font-weight-bolder fz-20px">

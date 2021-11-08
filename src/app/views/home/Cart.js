@@ -22,13 +22,10 @@ const Cart = (props) => {
 
     return (
         <div>
-            <div className="ff-ping-fang-tc-semibold  d-block d-md-none bg-secondary text-center text-primary py-2 px-auto fz-24px mt-4">
-                您的購物車
-            </div>
             <div className=" row mt-2 ">
                 {/* <!-- cart-list  --> */}
                 <div className="col-md-8">
-                    <div className="ff-ping-fang-tc-semibold d-none d-md-block bg-secondary text-center text-primary mb-4 py-2 px-auto fz-24px">
+                    <div className="ff-ping-fang-tc-semibold d-block bg-secondary text-center text-primary mb-4 py-2 px-auto fz-24px mx-n3 mx-md-0">
                         您的購物車
                     </div>
                     <ul>
@@ -99,7 +96,7 @@ const Cart = (props) => {
                 <OrderList
                     color="order-text-color"
                     bg="order-color "
-                    title="border-color"
+                    title="border-color mx-2 "
                     localData={localData}
                 >
                     <Link

@@ -5,7 +5,7 @@ import {
     ADD_ITEM,
     DELETE_ITEM,
     BTN_ADD_ITEM,
-    BTN_MINUSER_ITEM,
+    BTN_MINUSER_ITEM
 } from 'constants/actionType'
 
 const isLoading = (state = false, action) => {
@@ -26,7 +26,10 @@ const userInfo = (state = null, action) => {
 }
 
 //reducer
-const data = (state = JSON.parse(localStorage.getItem('DataList1')) || [], action) => {
+const data = (
+    state = JSON.parse(localStorage.getItem('DataList1')) || [],
+    action
+) => {
     const { type, idx, item } = action
     let resultState
     switch (type) {
@@ -59,7 +62,6 @@ const data = (state = JSON.parse(localStorage.getItem('DataList1')) || [], actio
             } else {
                 state[minuserId].amount = 1
             }
-            // state[minuserId].amount >= 0 ? (state[minuserId].amount -= 1) : 0
             resultState = [...state]
             break
         default:
@@ -74,7 +76,7 @@ const data = (state = JSON.parse(localStorage.getItem('DataList1')) || [], actio
 const reducers = combineReducers({
     isLoading,
     userInfo,
-    data,
+    data
 })
 
 export default reducers
