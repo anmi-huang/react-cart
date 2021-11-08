@@ -20,9 +20,9 @@ const Login = (props) => {
             body: formData,
             method: 'POST',
             headers: {
-                'X-Requested-With': 'XMLHttpRequest',
+                'X-Requested-With': 'XMLHttpRequest'
             },
-            signal,
+            signal
         })
             .then((resp) => resp.json())
             .then(({ success, data }) => {
@@ -32,7 +32,7 @@ const Login = (props) => {
                     swal({
                         title: `Hi, ${data.name}`,
                         text: '登入成功！！',
-                        icon: 'success',
+                        icon: 'success'
                     })
                 }
             })
@@ -60,13 +60,22 @@ const Login = (props) => {
 
     return (
         <div className="p-4">
-            <Link className="d-flex align-items-center mb-2 text-primary  " to="/home">
-                <i className="icon icon-home mr-1 fz-20px " aria-hidden="true"></i>
+            <Link
+                className="d-flex align-items-center mb-2 text-primary  "
+                to="/home"
+            >
+                <i
+                    className="icon icon-home mr-1 fz-20px "
+                    aria-hidden="true"
+                ></i>
             </Link>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div>
                     <div className="mb-2 mb-0-last">
-                        <label className="d-block mb-4px font-weight-bold " htmlFor="email">
+                        <label
+                            className="d-block mb-4px font-weight-bold "
+                            htmlFor="email"
+                        >
                             使用者名稱
                         </label>
                         <input
@@ -78,14 +87,21 @@ const Login = (props) => {
                                 required: '此欄位為必填',
                                 pattern: {
                                     value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                                    message: 'email格式：abc@gmail.com',
-                                },
+                                    message: 'email格式：abc@gmail.com'
+                                }
                             })}
                         />
-                        {errors.email && <div className="text-danger fz-12px">{errors.email.message}</div>}
+                        {errors.email && (
+                            <div className="text-danger fz-12px">
+                                {errors.email.message}
+                            </div>
+                        )}
                     </div>
                     <div className="mb-2 mb-0-last">
-                        <label className="d-block mb-4px font-weight-bold" htmlFor="password">
+                        <label
+                            className="d-block mb-4px font-weight-bold"
+                            htmlFor="password"
+                        >
                             密碼
                         </label>
                         <input
@@ -94,10 +110,14 @@ const Login = (props) => {
                             id="password"
                             name="password"
                             ref={register({
-                                required: '此欄位為必填',
+                                required: '此欄位為必填'
                             })}
                         />
-                        {errors.password && <div className="text-danger fz-12px">{errors.password.message}</div>}
+                        {errors.password && (
+                            <div className="text-danger fz-12px">
+                                {errors.password.message}
+                            </div>
+                        )}
                     </div>
                 </div>
                 {/* <div className="mt-3 mb-0-last">
@@ -107,7 +127,9 @@ const Login = (props) => {
                 </div> */}
 
                 <div className="mt-3 mb-0-last">
-                    <button className="btn btn-primary w-100 h-6 rounded">管理員登入</button>
+                    <button className="btn btn-primary w-100 h-6 rounded">
+                        管理員登入
+                    </button>
                 </div>
             </form>
         </div>

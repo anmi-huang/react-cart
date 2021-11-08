@@ -38,12 +38,20 @@ const Cart = (props) => {
                                 className="mb-2 mb-0-last row g-0 col-md-12 mb-2 pb-2 mx-0 px-0 border-cart border-secondary text-primary align-items-center  justify-content-between ff-ping-fang-tc-semibold  "
                             >
                                 <div className="col-6 col-md-3 pl-0">
-                                    <img src={item.imgUrl} alt="" className="cart-img w-100" />
+                                    <img
+                                        src={item.imgUrl}
+                                        alt=""
+                                        className="cart-img w-100"
+                                    />
                                 </div>
                                 <div className=" row g-0 col-6 col-md-6 ff-ping-fang-tc-light align-items-center">
                                     <div className="col-md-6 ">
-                                        <div className="fz-20px">{item.itemName}</div>
-                                        <div className="ff-Helvetica-neue-regular py-2px">NT$ {item.price}</div>
+                                        <div className="fz-20px">
+                                            {item.itemName}
+                                        </div>
+                                        <div className="ff-Helvetica-neue-regular py-2px">
+                                            NT$ {item.price}
+                                        </div>
                                     </div>
 
                                     <div className="col-md-6 d-flex  ">
@@ -88,10 +96,15 @@ const Cart = (props) => {
                     </ul>
                 </div>
                 {/* <!-- cart-list end --> */}
-                <OrderList color="order-text-color" bg="order-color " title="border-color" localData={localData}>
+                <OrderList
+                    color="order-text-color"
+                    bg="order-color "
+                    title="border-color"
+                    localData={localData}
+                >
                     <Link
                         to="/checkout"
-                        className="d-block text-center bg-yellow p-2 fz-24px ff-ping-fang-tc-semibold text-primary mx-n2 mx-md-0"
+                        className="d-block text-center bg-yellow p-2 fz-24px ff-ping-fang-tc-semibold text-primary mx-n3 mx-md-0"
                     >
                         結帳
                     </Link>
