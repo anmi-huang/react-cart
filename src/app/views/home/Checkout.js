@@ -8,12 +8,12 @@ import { toggleLoadingHint, deleteCheckout } from 'actions'
 import { DISTRICT_DATA } from '../../constants/districts'
 const Checkout = (props) => {
     const [locationData, setLocation] = useState([])
+    const localData = useSelector((state) => state.data)
     const [nameId, setName] = useState()
     const [district, setDistrict] = useState()
 
     const history = useHistory()
     const dispatch = useDispatch()
-    const localData = useSelector((state) => state.data)
 
     const controller = new AbortController()
     const signal = controller.signal
@@ -53,8 +53,12 @@ const Checkout = (props) => {
         }
     }, [])
     useEffect(() => {
-        setLocation(DISTRICT_DATA)
-        setName(17)
+        if (localData.length > 0) {
+            setLocation(DISTRICT_DATA)
+            setName(17)
+        } else {
+            history.replace('/')
+        }
     }, [])
 
     return (
