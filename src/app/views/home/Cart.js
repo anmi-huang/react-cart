@@ -28,7 +28,13 @@ const Cart = (props) => {
                     <div className="ff-ping-fang-tc-semibold d-block bg-secondary text-center text-primary mb-4 py-2 px-auto fz-24px mx-n3 mx-md-0">
                         您的購物車
                     </div>
+
                     <ul>
+                        {localData.length < 1 && (
+                            <li className="mb-1  text-center">
+                                <p>目前無資料</p>
+                            </li>
+                        )}
                         {localData.map((item, idx) => (
                             <li
                                 key={item.id}
@@ -84,7 +90,10 @@ const Cart = (props) => {
                                             swal({
                                                 title: '確定要刪除嗎?',
                                                 icon: 'warning',
-                                                buttons: true,
+                                                buttons: {
+                                                    confirm: true,
+                                                    cancel: true
+                                                },
                                                 dangerMode: true
                                             }).then((willDelete) => {
                                                 if (willDelete) {
@@ -107,12 +116,22 @@ const Cart = (props) => {
                     title="border-color mx-2 "
                     localData={localData}
                 >
-                    <Link
-                        to="/checkout"
-                        className="d-block text-center bg-yellow p-2 fz-24px ff-ping-fang-tc-semibold text-primary mx-n3 mx-md-0"
-                    >
-                        結帳
-                    </Link>
+                    {localData.length < 1 && (
+                        <a
+                            href="/"
+                            className="d-block text-center bg-yellow p-2 fz-24px ff-ping-fang-tc-semibold text-primary mx-n3 mx-md-0"
+                        >
+                            前往購物
+                        </a>
+                    )}
+                    {localData.length > 0 && (
+                        <Link
+                            to="/checkout"
+                            className="d-block text-center bg-yellow p-2 fz-24px ff-ping-fang-tc-semibold text-primary mx-n3 mx-md-0"
+                        >
+                            結帳
+                        </Link>
+                    )}
                 </OrderList>
             </div>
         </div>
