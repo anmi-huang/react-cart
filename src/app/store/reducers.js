@@ -5,7 +5,8 @@ import {
     ADD_ITEM,
     DELETE_ITEM,
     BTN_ADD_ITEM,
-    BTN_MINUSER_ITEM
+    BTN_MINUSER_ITEM,
+    DELETE_CHECKOUT
 } from 'constants/actionType'
 
 const isLoading = (state = false, action) => {
@@ -64,6 +65,10 @@ const data = (
             }
             resultState = [...state]
             break
+        case DELETE_CHECKOUT:
+            resultState = []
+            break
+
         default:
             resultState = state
     }

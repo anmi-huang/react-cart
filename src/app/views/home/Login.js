@@ -15,6 +15,7 @@ const Login = (props) => {
         const formData = new FormData()
         formData.append('email', email)
         formData.append('password', password)
+
         dispatch(toggleLoadingHint(true))
         fetch(API_ROUTES.login, {
             body: formData,
@@ -31,7 +32,7 @@ const Login = (props) => {
                     dispatch(changeUserInfo(data))
                     swal({
                         title: `Hi, ${data.name}`,
-                        text: '登入成功！！',
+                        text: '已登入！！',
                         icon: 'success'
                     })
                 }

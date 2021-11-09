@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import OrderList from 'components/OrderList'
 import { useSelector, useDispatch } from 'react-redux'
 import { deleteItem, btnAddItem, btnMinuserItem } from '../../actions'
-import confirm, { Button, alert } from 'react-alert-confirm'
+import swal from '@sweetalert/with-react'
 
 const Cart = (props) => {
     const dispatch = useDispatch()
@@ -81,8 +81,16 @@ const Cart = (props) => {
                                     <button
                                         className="col-md-2 d-none d-md-block text-right px-1"
                                         onClick={() => {
-                                            confirm()
-                                            dispatch(deleteItem(idx))
+                                            swal({
+                                                title: '確定要刪除嗎?',
+                                                icon: 'warning',
+                                                buttons: true,
+                                                dangerMode: true
+                                            }).then((willDelete) => {
+                                                if (willDelete) {
+                                                    dispatch(deleteItem(idx))
+                                                }
+                                            })
                                         }}
                                     >
                                         <i className="icon icon-delete fz-24px text-primary"></i>
